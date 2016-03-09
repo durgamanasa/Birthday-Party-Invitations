@@ -1,10 +1,10 @@
 public class Person {
     private final Name name;
     private final Gender gender;
-    private final int age;
+    private final Age age;
     private final Address address;
 
-    public Person(Name name, Gender gender, int age, Address address) {
+    public Person(Name name, Gender gender, Age age, Address address) {
         this.name = name;
         this.gender = gender;
         this.age = age;
