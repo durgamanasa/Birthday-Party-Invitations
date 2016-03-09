@@ -1,0 +1,30 @@
+Create a library which will print labels,that will go on invitation cover.
+Print the labels with country name
+Add options
+Input:
+    list of records
+        input format:
+            firstName,lastName,gender,age,city,state,country
+
+Output format:
+    prefix
+        Male Mr
+        Female Ms
+
+
+----------------------------------------------------------------------------
+$ cat records.txt
+    Julius,Barrows,Female,18,Veda haven,Vermont,Macedonia
+
+
+$ java InvitationStyles.java firstLast
+    Ms Julius Barrows
+
+$ java InvitationStyles.java lastFirst
+    Ms Barrows, Julius
+
+$ java InvitationStyles.java firstLastWithCountry
+    Ms Julius Barrows, Macedonia
+
+$ java InvitationStyles.java lastFirstWithCountry
+    Ms Barrows, Julius, Macedonia
