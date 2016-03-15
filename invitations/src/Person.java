@@ -26,4 +26,36 @@ public class Person {
     public String getLastFirstWithTitle() {
         return name.lastFirstWith(gender);
     }
+
+    public boolean isOfSameCountry(Country country) {
+        return address.isSameCountry(country);
+    }
+
+    public String getFirstLastWithCountry(Country country) {
+        String nameWithTitle = getFirstLastWithTitle();
+        return nameWithTitle + ", " + country.getCountry();
+    }
+
+    public String getFirstLastWithCountry() {
+        return getFirstLastWithTitle();
+    }
+
+    public String getLastFirstWithCountry(Country country) {
+        String nameWithTitle = getLastFirstWithTitle();
+        return nameWithTitle + ", " + country.getCountry();
+    }
+
+    public String getLastFirstWithCountry() {
+        return getLastFirstWithTitle();
+    }
+
+    public boolean isAboveTheAge(int threshold) {
+        return age.isAboveAge(threshold);
+    }
+
+    public String getFirstLastWithCountryAndAge(Country country, Age thresholdAge) {
+        String nameWithCountry = getFirstLastWithCountry(country);
+        return nameWithCountry + ", " + age.getAge();
+    }
+
 }

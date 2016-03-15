@@ -1,6 +1,9 @@
 Create a library which will print labels,that will go on invitation cover.
-Print the labels with country name
+Print the people names who are from specific country
 Add options
+Separate the options and print the name in the format according to the options
+Print the people names with legal drinking age from a specific country.
+
 Input:
     list of records
         input format:
@@ -17,14 +20,14 @@ $ cat records.txt
     Julius,Barrows,Female,18,Veda haven,Vermont,Macedonia
 
 
-$ java InvitationStyles.java firstLast
+$ java --firstLast records.txt
+    Julius Barrows
+
+$ java --firstLastWithTitle records.txt
     Ms Julius Barrows
 
-$ java InvitationStyles.java lastFirst
-    Ms Barrows, Julius
+$ java --firstLastWithCountry Macedonia records.txt
+    Ms Kenya Dicki Macedonia
 
-$ java InvitationStyles.java firstLastWithCountry
-    Ms Julius Barrows, Macedonia
-
-$ java InvitationStyles.java lastFirstWithCountry
-    Ms Barrows, Julius, Macedonia
+$ java --firstLastWithCountryAndAge Macedonia 30 records.txt
+    Ms Kenya Dicki Macedonia, 32

@@ -10,13 +10,13 @@ public class RecordsReader {
         this.fileName = fileName;
     }
 
-    public ArrayList<String> readRecords() throws IOException {
+    public RecordsList readRecords() throws IOException {
         FileReader fr = new FileReader(fileName);
         BufferedReader br = new BufferedReader(fr);
         String line;
-        ArrayList<String> records = new ArrayList<>();
+        RecordsList records = new RecordsList();
         while ((line = br.readLine()) != null) {
-            records.add(line);
+            records.addRecord(line);
         }
         return records;
     }

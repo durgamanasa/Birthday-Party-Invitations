@@ -1,11 +1,16 @@
 public class Age {
-    private final String age;
+    private final int age;
 
-    public Age(String age) {
+    public Age(int age) {
         this.age = age;
     }
 
     public int getAge(){
-        return Integer.parseInt(this.age);
+        return this.age;
+    }
+
+
+    public boolean isAboveAge(int threshold) {
+        return this.age > threshold;
     }
 }

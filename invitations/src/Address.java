@@ -9,5 +9,7 @@ public class Address {
         this.country = country;
     }
 
-
+    public boolean isSameCountry(Country otherCountry) {
+        return this.country.equals(otherCountry);
+    }
 }

@@ -22,4 +22,19 @@ public class Name {
     public String lastFirstWith(Gender title) {
         return title.getPrefix() + " " + lastFirst();
     }
+
+    public String firstLastWithCountry(Country country) {
+        return firstLast() + ", " + country.getCountry();
+    }
+
+    public String firstLastWithCountry(Gender title,Country country) {
+        return firstLastWith(title) + ", " + country.getCountry();
+    }
+
+    public String lastFirstWithCountry(Country country) {
+        return lastFirst() + ", " + country.getCountry();
+    }
+    public String lastFirstWithCountry(Gender title,Country country) {
+        return lastFirstWith(title) + ", " + country.getCountry();
+    }
 }
